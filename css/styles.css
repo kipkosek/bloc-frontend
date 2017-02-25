@@ -1,12 +1,12 @@
 /* Normalize CSS */
-html, body{
+html, body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
-	background-color: #FFFFFF;
+	background-color: rgb(255, 255, 255);
 	height: 100%;
 }
 
-.container{
+.container {
 	width: 100%;
 	height: 100%;
 	max-width: 960px;
@@ -15,4 +15,99 @@ html, body{
 	box-sizing: border-box;
 }
 
-/* Write your code here */
+.header {
+	background-color: rgb(30, 140, 197);
+	height: 28px;
+}
+
+.header-text-messages {
+	font-size: 12px;
+	font-style: OpenSans, sans-serif;
+	color: rgb(255, 255, 255);
+    vertical-align: middle;
+    float: left;
+    padding-top: 6px;
+	padding-left: 12px;
+	display: inline-block;
+}
+
+.spacer {
+    overflow: hidden;
+}
+
+.header-text-dismiss {
+	font-size: 12px;
+	font-style: OpenSans, sans-serif;
+	color: rgb(255, 255, 255);
+    vertical-align: middle;
+    float: right;
+    padding-top: 6px;
+	padding-right: 12px;
+	display: inline-block;
+}
+
+#message-table {
+    width: 100%;
+    border-left: solid thin rgb(204, 204, 204);
+    border-right: solid thin rgb(204, 204, 204);
+}
+
+tr:hover {
+    background-color: lightblue;
+}
+
+td {
+    height: 60px;
+    margin: 0;
+    border-bottom: solid thin rgb(204, 204, 204);
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.photo {
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.message-sender {
+    font-size: 12px;
+    color: rgb(77, 77, 77);
+    width: 58px;
+}
+
+.message-container {
+    font-size: 14px;
+    font-style: OpenSans, sans-serif;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 650px;
+}
+
+.subject {
+    color: rgb(77, 77, 77);
+    padding-top: 16px;
+}
+
+.body {
+    color: rgb(153, 153, 153);
+    padding-bottom: 16px;
+}
+
+.message-age {
+    font-style: OpenSans, sans-serif;
+    font-size: 12px;
+    color: rgb(153, 153, 153);
+}
+
+.message-dismiss {
+    font-style: FontAwesome, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(153, 153, 153);
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.message-dismiss:hover {
+    font-size: 24px;
+}

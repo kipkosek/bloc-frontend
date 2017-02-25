@@ -25,4 +25,30 @@ var data = [{	student_name: 'Sanny Lin',
 			}];
 
 
-//Write your code here
+
+
+var createMessageRow = function(photo, name, subject, body, age) {
+	var template =
+		'<tr class="message-item">'
+		+	'<td class="message-photo">' + '<img class="photo" src="' + photo + '" height="36" width="36"/>' + '</td>'
+		+	'<td class="message-sender">' + name + '</td>'
+		+	'<td class="message-container">' + '<div class="subject">' + subject + '</div>' +   '<div class="body">' + body + '</div></td>'
+		+	'<td class="message-age">' + age + '</td>'
+        +   '<td class="message-dismiss">x</td>'
+		+   '</tr>'
+        ;
+    
+        return template;
+};
+
+var createMessageList = function(data) {
+    var $messageTable = $("#message-table");
+    
+	for (var i = 0; i < data.length; i++) {
+        $messageTable.append(createMessageRow(data[i].profile_photo, data[i].student_name, data[i].subject, data[i].message, data[i].age));
+	}
+};
+
+window.onload = function() {
+    createMessageList(data);
+};
