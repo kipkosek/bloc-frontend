@@ -25,8 +25,6 @@ var data = [{	student_name: 'Sanny Lin',
 			}];
 
 
-
-
 var createMessageRow = function(photo, name, subject, body, age) {
 	var template =
 		'<tr class="message-item">'
@@ -41,14 +39,28 @@ var createMessageRow = function(photo, name, subject, body, age) {
         return template;
 };
 
+var $headerCounter = $("#header-counter");
+var $messageNumber = 0;
+
 var createMessageList = function(data) {
     var $messageTable = $("#message-table");
     
 	for (var i = 0; i < data.length; i++) {
         $messageTable.append(createMessageRow(data[i].profile_photo, data[i].student_name, data[i].subject, data[i].message, data[i].age));
+        $messageNumber++;
 	}
 };
 
-window.onload = function() {
+$(document).ready(function() {
     createMessageList(data);
-};
+    $(".message-dismiss").click(function() {
+        $(this).parent().remove();
+        $messageNumber--;
+        $headerCounter.html($messageNumber);
+    });
+    $("#header-text-dismiss").click(function() {
+        $(".message-item").remove();
+        $headerCounter.html(0);
+    });
+    $headerCounter.html($messageNumber);
+});

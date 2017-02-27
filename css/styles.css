@@ -20,7 +20,7 @@ html, body {
 	height: 28px;
 }
 
-.header-text-messages {
+#header-text-messages {
 	font-size: 12px;
 	font-style: OpenSans, sans-serif;
 	color: rgb(255, 255, 255);
@@ -31,11 +31,11 @@ html, body {
 	display: inline-block;
 }
 
-.spacer {
+#spacer {
     overflow: hidden;
 }
 
-.header-text-dismiss {
+#header-text-dismiss {
 	font-size: 12px;
 	font-style: OpenSans, sans-serif;
 	color: rgb(255, 255, 255);
@@ -44,6 +44,10 @@ html, body {
     padding-top: 6px;
 	padding-right: 12px;
 	display: inline-block;
+}
+
+#header-text-dismiss:hover {
+    font-weight: bold;
 }
 
 #message-table {
@@ -57,7 +61,7 @@ tr:hover {
 }
 
 td {
-    height: 60px;
+    max-height: 60px;
     margin: 0;
     border-bottom: solid thin rgb(204, 204, 204);
     border-spacing: 0;
